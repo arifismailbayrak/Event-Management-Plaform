@@ -35,8 +35,8 @@ export const BlogPostPage: React.FC = () => {
       <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">E</div>
-            <span className="font-bold text-xl tracking-tight text-slate-900">Eventura</span>
+            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">O</div>
+            <span className="font-bold text-xl tracking-tight text-slate-900">OffsiteFlow</span>
           </Link>
           <Link to="/blog" className="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-1 transition-colors">
             <ArrowLeft size={16} /> Back to Journal
@@ -93,38 +93,6 @@ export const BlogPostPage: React.FC = () => {
                <img src={post.author.avatar} alt={post.author.name} className="w-16 h-16 rounded-full border-2 border-white shadow-sm" />
                <div>
                   <h3 className="font-bold text-slate-900 text-lg">Written by {post.author.name}</h3>
-                  <p className="text-slate-500 text-sm">{post.author.role} at Eventura. Obsessed with making work not suck.</p>
+                  <p className="text-slate-500 text-sm">{post.author.role} at OffsiteFlow. Obsessed with making work not suck.</p>
                </div>
             </div>
-         </article>
-
-         {/* Right Sidebar (Share) */}
-         <div className="hidden md:block">
-            <div className="sticky top-32 space-y-4">
-               <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Share</p>
-               <button className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-500 hover:bg-[#1DA1F2] hover:text-white transition-all">
-                  <Twitter size={18} />
-               </button>
-               <button className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-500 hover:bg-[#0A66C2] hover:text-white transition-all">
-                  <Linkedin size={18} />
-               </button>
-               <button className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-500 hover:bg-[#1877F2] hover:text-white transition-all">
-                  <Facebook size={18} />
-               </button>
-               <button className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-700 transition-all" onClick={() => navigator.clipboard.writeText(window.location.href)}>
-                  <Share2 size={18} />
-               </button>
-            </div>
-         </div>
-      </div>
-      
-       {/* Footer */}
-       <footer className="bg-slate-50 py-12 border-t border-slate-200 px-6 text-center">
-         <div className="flex flex-col items-center gap-4">
-            <div className="h-8 w-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold">E</div>
-            <p className="text-sm text-slate-500">© {new Date().getFullYear()} Eventura Inc.</p>
-         </div>
-      </footer>
-    </div>
-  );
-};

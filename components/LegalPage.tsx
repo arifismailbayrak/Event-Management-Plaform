@@ -21,8 +21,8 @@ export const LegalPage: React.FC = () => {
       <nav className="sticky top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">E</div>
-            <span className="font-bold text-xl tracking-tight text-slate-900">Eventura</span>
+            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">O</div>
+            <span className="font-bold text-xl tracking-tight text-slate-900">OffsiteFlow</span>
           </Link>
           <Link to="/" className="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-1 transition-colors">
             <ArrowLeft size={16} /> Back to Home
@@ -59,13 +59,13 @@ export const LegalPage: React.FC = () => {
             <div className="space-y-10 text-slate-600 leading-relaxed text-sm md:text-base">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">1. Acceptance of Terms</h3>
-                <p>This SaaS Services Agreement ("Agreement") is entered into between Eventura ("Company") and you ("Customer"). This Agreement includes and incorporates the Order Form and these Terms and Conditions. By accessing the Eventura platform, you agree to these terms. There shall be no force or effect to any different terms of any related purchase order or similar form even if signed by the parties after the date hereof.</p>
+                <p>This SaaS Services Agreement ("Agreement") is entered into between OffsiteFlow ("Company") and you ("Customer"). This Agreement includes and incorporates the Order Form and these Terms and Conditions. By accessing the OffsiteFlow platform, you agree to these terms. There shall be no force or effect to any different terms of any related purchase order or similar form even if signed by the parties after the date hereof.</p>
               </div>
 
               <div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">2. Services and Support</h3>
                 <ul className="space-y-3 list-none">
-                  <li><strong className="text-slate-900">2.1 Provision of Service.</strong> Subject to the terms of this Agreement, Company will use commercially reasonable efforts to provide Customer the Services. Services generally include access to the Eventura workspace, blueprint wizard, and vendor marketplace.</li>
+                  <li><strong className="text-slate-900">2.1 Provision of Service.</strong> Subject to the terms of this Agreement, Company will use commercially reasonable efforts to provide Customer the Services. Services generally include access to the OffsiteFlow workspace, blueprint wizard, and vendor marketplace.</li>
                   <li><strong className="text-slate-900">2.2 Registration.</strong> As part of the registration process, Customer will identify an administrative user name and password for Customer’s Company account. Company reserves the right to refuse registration of, or cancel passwords it deems inappropriate.</li>
                   <li><strong className="text-slate-900">2.3 Support.</strong> Subject to the terms hereof, Company will provide Customer with reasonable technical support services.</li>
                 </ul>
@@ -166,9 +166,9 @@ export const LegalPage: React.FC = () => {
 
           {/* Footer */}
           <div className="border-t border-slate-100 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-             <p>© {new Date().getFullYear()} Eventura Inc. All rights reserved.</p>
+             <p>© {new Date().getFullYear()} OffsiteFlow Inc. All rights reserved.</p>
              <div className="flex gap-4 mt-4 md:mt-0">
-                <a href="mailto:legal@eventura.com" className="hover:text-indigo-600 transition-colors">Contact Legal Team</a>
+                <a href="mailto:legal@offsiteflow.com" className="hover:text-indigo-600 transition-colors">Contact Legal Team</a>
              </div>
           </div>
         </div>

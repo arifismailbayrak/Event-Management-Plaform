@@ -30,9 +30,9 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link to="/" className="flex justify-center items-center gap-2 mb-6 group">
             <div className="h-10 w-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-indigo-200 shadow-lg text-xl group-hover:scale-105 transition-transform">
-              E
+              O
             </div>
-            <span className="font-bold text-2xl tracking-tight text-slate-900">Eventura</span>
+            <span className="font-bold text-2xl tracking-tight text-slate-900">OffsiteFlow</span>
         </Link>
         <h2 className="text-center text-3xl font-bold tracking-tight text-slate-900">
           {isLogin ? 'Welcome back' : 'Create an account'}
@@ -40,7 +40,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
         <p className="mt-2 text-center text-sm text-slate-600">
           {isLogin ? (
             <>
-              New to Eventura?{' '}
+              New to OffsiteFlow?{' '}
               <button onClick={toggleMode} className="font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">
                 Sign up for free
               </button>

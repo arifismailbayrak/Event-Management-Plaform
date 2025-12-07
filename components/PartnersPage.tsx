@@ -35,8 +35,8 @@ export const PartnersPage: React.FC = () => {
   const faqs = [
     { q: "Is there a listing fee?", a: "No. It is free to list. We only take a standard commission on confirmed bookings." },
     { q: "Who sets the prices?", a: "You do. We respect your standard rates and add our service fee on top of your quote or negotiate a commission structure that works for you." },
-    { q: "How do payments work?", a: "Eventura pays you directly. No need to chase individual corporate clients. We typically settle invoices within 7 days of the event completion." },
-    { q: "What kind of clients use Eventura?", a: "We work with venture-backed technology companies, financial firms, and creative agencies who value quality and speed." }
+    { q: "How do payments work?", a: "OffsiteFlow pays you directly. No need to chase individual corporate clients. We typically settle invoices within 7 days of the event completion." },
+    { q: "What kind of clients use OffsiteFlow?", a: "We work with venture-backed technology companies, financial firms, and creative agencies who value quality and speed." }
   ];
 
   return (
@@ -45,8 +45,8 @@ export const PartnersPage: React.FC = () => {
       <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">E</div>
-            <span className="font-bold text-xl tracking-tight text-slate-900">Eventura</span>
+            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">O</div>
+            <span className="font-bold text-xl tracking-tight text-slate-900">OffsiteFlow</span>
           </Link>
           <Link to="/" className="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-1 transition-colors">
             <ArrowLeft size={16} /> Back to Home
@@ -60,7 +60,7 @@ export const PartnersPage: React.FC = () => {
            Partner Network
         </div>
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-slate-900 max-w-4xl mx-auto leading-tight">
-          Grow your corporate business <br className="hidden md:block" /> with Eventura.
+          Grow your corporate business <br className="hidden md:block" /> with OffsiteFlow.
         </h1>
         <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light mb-10">
           We connect premium vendors with 50+ fast-growing tech companies. <br className="hidden md:block"/> No marketing fees, just confirmed bookings.
@@ -83,7 +83,7 @@ export const PartnersPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">Zero Invoice Chasing</h3>
                 <p className="text-slate-600 leading-relaxed">
-                    We handle the client billing. You get paid by Eventura directly, on time, every time. Guaranteed payment terms.
+                    We handle the client billing. You get paid by OffsiteFlow directly, on time, every time. Guaranteed payment terms.
                 </p>
             </div>
             {/* Benefit 2 */}
@@ -253,9 +253,9 @@ export const PartnersPage: React.FC = () => {
            <div className="col-span-1 md:col-span-1">
               <Link to="/" className="flex items-center gap-2 mb-4 group">
                 <div className="h-6 w-6 bg-slate-900 rounded-md flex items-center justify-center text-white text-xs font-bold group-hover:bg-indigo-600 transition-colors">
-                  E
+                  O
                 </div>
-                <span className="font-bold text-slate-900">Eventura</span>
+                <span className="font-bold text-slate-900">OffsiteFlow</span>
               </Link>
               <p className="text-sm text-slate-600 text-left">The operating system for modern corporate events. We simplify the complex world of event planning into a delightful experience.</p>
            </div>
@@ -288,7 +288,7 @@ export const PartnersPage: React.FC = () => {
         </div>
         <div className="max-w-7xl mx-auto pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
            <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} Eventura Inc. All rights reserved.
+            © {new Date().getFullYear()} OffsiteFlow Inc. All rights reserved.
           </p>
           <div className="flex gap-4">
              {/* Social icons placeholder */}

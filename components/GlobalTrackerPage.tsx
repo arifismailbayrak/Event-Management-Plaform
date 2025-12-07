@@ -54,7 +54,7 @@ export const GlobalTrackerPage: React.FC<GlobalTrackerPageProps> = ({ events, on
          {/* Global Sidebar - Desktop Only */}
          <aside className="hidden md:flex w-64 bg-slate-900 text-white flex-col flex-shrink-0 fixed h-full z-20">
             <div className="h-16 flex items-center px-6 font-bold text-xl tracking-tight border-b border-slate-800">
-                Eventura
+                OffsiteFlow
             </div>
             <nav className="flex-1 py-6 px-3 space-y-1">
                 <div className="flex items-center px-3 py-2.5 rounded-lg bg-indigo-600 text-white font-medium">

@@ -273,7 +273,7 @@ export const Workspace: React.FC<WorkspaceProps> = ({ initialEvent, onSave, isRe
           <header className="h-14 md:h-16 border-b border-gray-200 bg-white flex items-center justify-between px-4 md:px-6 z-30 flex-shrink-0 shadow-sm relative">
             <Link to="/" className="flex items-center gap-3 group">
               <div className="h-7 w-7 md:h-8 md:w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold group-hover:scale-105 transition-transform">
-                E
+                O
               </div>
               <div className="hidden md:block">
                 <h1 className="text-sm font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">{event.name}</h1>

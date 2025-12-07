@@ -20,8 +20,8 @@ export const PricingPage: React.FC = () => {
       <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">E</div>
-            <span className="font-bold text-xl tracking-tight text-slate-900">Eventura</span>
+            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">O</div>
+            <span className="font-bold text-xl tracking-tight text-slate-900">OffsiteFlow</span>
           </Link>
           <Link to="/" className="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-1 transition-colors">
             <ArrowLeft size={16} /> Back to Home
@@ -106,7 +106,7 @@ export const PricingPage: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-2">Pro Workspace</h3>
             <p className="text-sm text-slate-400 mb-6 min-h-[40px]">For office managers running multiple events.</p>
             <div className="mb-8">
-              <span className="text-4xl font-bold text-white">${billingCycle === 'YEARLY' ? '49' : '59'}</span>
+              <span className="text-4xl font-bold text-white">${billingCycle === 'YEARLY' ? '99' : '119'}</span>
               <span className="text-slate-400">/mo</span>
             </div>
             <button 
@@ -150,7 +150,7 @@ export const PricingPage: React.FC = () => {
               <span className="text-4xl font-bold text-slate-900">Custom</span>
             </div>
             <button 
-              onClick={() => window.location.href = "mailto:sales@eventura.com"}
+              onClick={() => window.location.href = "mailto:sales@offsiteflow.com"}
               className="w-full py-3 px-4 bg-white border-2 border-slate-900 text-slate-900 font-bold rounded-xl hover:bg-slate-50 transition-colors mb-8"
             >
               Contact Sales
@@ -268,8 +268,8 @@ export const PricingPage: React.FC = () => {
       {/* Footer */}
       <footer className="bg-slate-50 py-12 px-6 text-center border-t border-slate-200">
          <div className="flex flex-col items-center gap-4">
-            <div className="h-8 w-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold">E</div>
-            <p className="text-sm text-slate-500">© {new Date().getFullYear()} Eventura Inc.</p>
+            <div className="h-8 w-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold">O</div>
+            <p className="text-sm text-slate-500">© {new Date().getFullYear()} OffsiteFlow Inc.</p>
          </div>
       </footer>
     </div>

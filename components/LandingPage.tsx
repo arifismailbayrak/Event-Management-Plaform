@@ -34,16 +34,16 @@ export const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">
-              E
+              O
             </div>
-            <span className="font-bold text-xl tracking-tight text-slate-900">Eventura</span>
+            <span className="font-bold text-xl tracking-tight text-slate-900">OffsiteFlow</span>
           </Link>
           
           {/* Desktop Nav */}
           <div className="hidden md:flex gap-8 items-center">
             <button onClick={() => scrollToSection('blueprints')} className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors cursor-pointer">Blueprints</button>
-            <button onClick={() => scrollToSection('marketplace')} className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors cursor-pointer">Marketplace</button>
             <button onClick={() => scrollToSection('Benefits')} className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors cursor-pointer">Benefits</button>
+            <button onClick={() => scrollToSection('marketplace')} className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors cursor-pointer">Marketplace</button>
             <button onClick={() => scrollToSection('testimonials')} className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors cursor-pointer">Customers</button>
             <Link to="/pricing" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors cursor-pointer">
                Pricing
@@ -66,8 +66,8 @@ export const LandingPage: React.FC = () => {
         {mobileMenuOpen && (
             <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl py-4 flex flex-col z-50 animate-in slide-in-from-top-2">
                 <button onClick={() => scrollToSection('blueprints')} className="px-6 py-3 text-left font-medium text-slate-600 hover:bg-slate-50">Blueprints</button>
-                <button onClick={() => scrollToSection('marketplace')} className="px-6 py-3 text-left font-medium text-slate-600 hover:bg-slate-50">Marketplace</button>
                 <button onClick={() => scrollToSection('Benefits')} className="px-6 py-3 text-left font-medium text-slate-600 hover:bg-slate-50">Benefits</button>
+                <button onClick={() => scrollToSection('marketplace')} className="px-6 py-3 text-left font-medium text-slate-600 hover:bg-slate-50">Marketplace</button>
                 <button onClick={() => scrollToSection('testimonials')} className="px-6 py-3 text-left font-medium text-slate-600 hover:bg-slate-50">Customers</button>
                 <Link to="/pricing" className="px-6 py-3 text-left font-medium text-slate-600 hover:bg-slate-50">Pricing</Link>
                 <div className="border-t border-slate-100 my-2"></div>
@@ -184,7 +184,7 @@ export const LandingPage: React.FC = () => {
               </div>
             </div>
 
-            {/* The New Way: Eventura Card */}
+            {/* The New Way: OffsiteFlow Card */}
             <div className="relative group perspective-1000">
               <div className="absolute -inset-4 bg-gradient-to-r from-indigo-200 to-purple-200 rounded-[2rem] blur-xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
               <div className="relative bg-white border border-slate-200 rounded-xl shadow-2xl h-[22rem] flex flex-col transform transition-transform duration-500 hover:-rotate-1 hover:scale-[1.02] overflow-hidden">
@@ -192,8 +192,8 @@ export const LandingPage: React.FC = () => {
                 {/* Header */}
                  <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
                   <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider flex items-center gap-2">
-                     <div className="w-4 h-4 rounded bg-indigo-600 flex items-center justify-center text-[10px] text-white font-bold">E</div>
-                     Eventura Workspace
+                     <div className="w-4 h-4 rounded bg-indigo-600 flex items-center justify-center text-[10px] text-white font-bold">O</div>
+                     OffsiteFlow Workspace
                   </span>
                   <div className="flex items-center gap-1.5 text-[10px] font-semibold text-emerald-600 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-full">
                     <Check size={10} strokeWidth={3} />
@@ -441,14 +441,14 @@ export const LandingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight mb-4 text-slate-900">Loved by modern teams</h2>
             <p className="text-slate-600 text-lg">
-              See why high-growth companies trust Eventura to manage their culture.
+              See why high-growth companies trust OffsiteFlow to manage their culture.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
              {[
                {
-                 quote: "I used to spend 10 hours a week on spreadsheets. Eventura cut that down to 30 minutes. It's a game changer.",
+                 quote: "I used to spend 10 hours a week on spreadsheets. OffsiteFlow cut that down to 30 minutes. It's a game changer.",
                  author: "Sarah J.",
                  role: "Office Manager",
                  company: "TechFlow",
@@ -495,9 +495,9 @@ export const LandingPage: React.FC = () => {
            <div className="col-span-1 md:col-span-1">
               <Link to="/" className="flex items-center gap-2 mb-4 group">
                 <div className="h-6 w-6 bg-slate-900 rounded-md flex items-center justify-center text-white text-xs font-bold group-hover:bg-indigo-600 transition-colors">
-                  E
+                  O
                 </div>
-                <span className="font-bold text-slate-900">Eventura</span>
+                <span className="font-bold text-slate-900">OffsiteFlow</span>
               </Link>
               <p className="text-sm text-slate-600 text-left">The operating system for modern corporate events. We simplify the complex world of event planning into a delightful experience.</p>
            </div>
@@ -530,7 +530,7 @@ export const LandingPage: React.FC = () => {
         </div>
         <div className="max-w-7xl mx-auto pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
            <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} Eventura Inc. All rights reserved.
+            © {new Date().getFullYear()} OffsiteFlow Inc. All rights reserved.
           </p>
           <div className="flex gap-4">
              {/* Social icons placeholder */}

@@ -295,8 +295,8 @@ export const BlueprintsPage: React.FC = () => {
       <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">E</div>
-            <span className="font-bold text-xl tracking-tight text-slate-900">Eventura</span>
+            <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform">O</div>
+            <span className="font-bold text-xl tracking-tight text-slate-900">OffsiteFlow</span>
           </Link>
           <div className="flex gap-4">
              <Link to="/new" className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-sm hover:shadow-md">
@@ -466,9 +466,9 @@ export const BlueprintsPage: React.FC = () => {
            <div className="col-span-1 md:col-span-1">
               <Link to="/" className="flex items-center gap-2 mb-4 group">
                 <div className="h-6 w-6 bg-slate-900 rounded-md flex items-center justify-center text-white text-xs font-bold group-hover:bg-indigo-600 transition-colors">
-                  E
+                  O
                 </div>
-                <span className="font-bold text-slate-900">Eventura</span>
+                <span className="font-bold text-slate-900">OffsiteFlow</span>
               </Link>
               <p className="text-sm text-slate-600 text-left">The operating system for modern corporate events. We simplify the complex world of event planning into a delightful experience.</p>
            </div>
@@ -501,7 +501,7 @@ export const BlueprintsPage: React.FC = () => {
         </div>
         <div className="max-w-7xl mx-auto pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
            <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} Eventura Inc. All rights reserved.
+            © {new Date().getFullYear()} OffsiteFlow Inc. All rights reserved.
           </p>
           <div className="flex gap-4">
              {/* Social icons placeholder */}

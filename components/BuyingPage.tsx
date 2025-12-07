@@ -30,9 +30,9 @@ export const BuyingPage: React.FC = () => {
 
   const planDetails = {
       name: planId === 'pro' ? 'Pro Workspace' : 'Enterprise Deposit',
-      price: planId === 'pro' ? (cycle === 'YEARLY' ? 49 : 59) : 500,
+      price: planId === 'pro' ? (cycle === 'YEARLY' ? 99 : 119) : 500,
       period: planId === 'pro' ? (cycle === 'YEARLY' ? '/mo (billed yearly)' : '/mo') : ' deposit',
-      total: planId === 'pro' ? (cycle === 'YEARLY' ? 49 * 12 : 59) : 500
+      total: planId === 'pro' ? (cycle === 'YEARLY' ? 99 * 12 : 119) : 500
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +60,7 @@ export const BuyingPage: React.FC = () => {
                  <CheckCircle2 size={40} />
              </div>
              <h1 className="text-3xl font-bold text-slate-900 mb-2">Payment Successful!</h1>
-             <p className="text-slate-500 mb-8">Welcome to Eventura Pro. Redirecting you to your workspace...</p>
+             <p className="text-slate-500 mb-8">Welcome to OffsiteFlow Pro. Redirecting you to your workspace...</p>
              <Loader2 className="animate-spin text-indigo-600" />
         </div>
       );
@@ -77,8 +77,8 @@ export const BuyingPage: React.FC = () => {
 
            <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-8">
-                     <div className="h-8 w-8 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">E</div>
-                     <span className="font-bold text-xl tracking-tight">Eventura</span>
+                     <div className="h-8 w-8 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">O</div>
+                     <span className="font-bold text-xl tracking-tight">OffsiteFlow</span>
                 </div>
 
                 <div className="mb-8">
