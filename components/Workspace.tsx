@@ -13,8 +13,9 @@ import { Event, TimelineItem, Vendor, ServiceType } from '../types';
 import { Timeline } from './Timeline';
 import { Toolbox } from './Toolbox';
 import { VendorCard } from './VendorCard';
-import { AlertCircle, CheckCircle2, Calendar as CalendarIcon, ArrowLeft, Lock, Loader2 } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Calendar as CalendarIcon, ArrowLeft, Lock, Loader2, Sparkles } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { AIDesignStudio } from './AIDesignStudio';
 
 interface WorkspaceProps {
   initialEvent: Event;
@@ -29,6 +30,9 @@ export const Workspace: React.FC<WorkspaceProps> = ({ initialEvent, onSave, isRe
   const [event, setEvent] = useState<Event>(initialEvent);
   const [activeDragItem, setActiveDragItem] = useState<{type: 'VENDOR' | 'TIMELINE_ITEM', data: any} | null>(null);
   const [currentDayIndex, setCurrentDayIndex] = useState(0);
+  
+  // AI Design Studio State
+  const [aiStudioPrompt, setAiStudioPrompt] = useState<string | null>(null);
   
   // State to manage the confirmation transition
   const [isConfirming, setIsConfirming] = useState(false);
@@ -247,8 +251,21 @@ export const Workspace: React.FC<WorkspaceProps> = ({ initialEvent, onSave, isRe
   const budgetProgress = (event.currentSpend / (event.totalBudgetLimit || 1)) * 100; // avoid div by zero
   const isOverBudget = event.currentSpend > event.totalBudgetLimit;
 
+  // AI Studio Handler
+  const handleOpenAIStudio = (prompt: string = '') => {
+    setAiStudioPrompt(prompt);
+  };
+
   return (
     <>
+      {/* AI Studio Modal */}
+      {aiStudioPrompt !== null && (
+        <AIDesignStudio 
+          initialPrompt={aiStudioPrompt} 
+          onClose={() => setAiStudioPrompt(null)} 
+        />
+      )}
+
       {/* Success Overlay */}
       {showSuccessOverlay && (
         <div className="fixed inset-0 z-[9999] bg-white/90 backdrop-blur-md flex items-center justify-center animate-in fade-in duration-300">
@@ -271,23 +288,35 @@ export const Workspace: React.FC<WorkspaceProps> = ({ initialEvent, onSave, isRe
           
           {/* Top Bar */}
           <header className="h-14 md:h-16 border-b border-gray-200 bg-white flex items-center justify-between px-4 md:px-6 z-30 flex-shrink-0 shadow-sm relative">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="h-7 w-7 md:h-8 md:w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold group-hover:scale-105 transition-transform">
-                O
-              </div>
-              <div className="hidden md:block">
-                <h1 className="text-sm font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">{event.name}</h1>
-                <div className="flex items-center gap-2 text-xs text-gray-500 font-medium">
-                  <span className="bg-gray-100 px-2 py-0.5 rounded-full">{event.eventType}</span>
-                  {event.vibe && <span className="bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-100">{event.vibe}</span>}
-                  {isReadOnly && (
-                      <span className="bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
-                          <Lock size={10} /> Archived
-                      </span>
-                  )}
+            <div className="flex items-center gap-4">
+              <Link to="/" className="flex items-center gap-3 group">
+                <div className="h-7 w-7 md:h-8 md:w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold group-hover:scale-105 transition-transform">
+                  O
                 </div>
-              </div>
-            </Link>
+                <div className="hidden md:block">
+                  <h1 className="text-sm font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">{event.name}</h1>
+                  <div className="flex items-center gap-2 text-xs text-gray-500 font-medium">
+                    <span className="bg-gray-100 px-2 py-0.5 rounded-full">{event.eventType}</span>
+                    {event.vibe && <span className="bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-100">{event.vibe}</span>}
+                    {isReadOnly && (
+                        <span className="bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
+                            <Lock size={10} /> Archived
+                        </span>
+                    )}
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Header AI Button */}
+              {!isReadOnly && (
+                <button 
+                  onClick={() => handleOpenAIStudio()}
+                  className="hidden md:flex items-center gap-2 text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-full hover:bg-indigo-100 transition-colors border border-indigo-100"
+                >
+                  <Sparkles size={14} /> AI Design Studio
+                </button>
+              )}
+            </div>
 
             {/* Budget Bar - Flexible Width */}
             <div className="flex-1 max-w-[150px] md:max-w-xl mx-4 md:mx-12">
@@ -385,6 +414,9 @@ export const Workspace: React.FC<WorkspaceProps> = ({ initialEvent, onSave, isRe
                   eventVibe={event.vibe}
                   budgetLimit={event.totalBudgetLimit} 
                   onAddService={handleAddService}
+                  onVisualize={(vendor) => {
+                    handleOpenAIStudio(`A professional photography of a ${vendor.vibe || ''} ${vendor.type.toLowerCase().replace('_', ' ')} setup by ${vendor.name}. ${vendor.description}. High quality, 4k, photorealistic.`);
+                  }}
               />
             </div>
           </div>

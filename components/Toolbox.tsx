@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { ServiceType } from '../types';
+import { ServiceType, Vendor } from '../types';
 import { MOCK_VENDORS } from '../constants';
 import { VendorCard } from './VendorCard';
 import { ChevronDown, ChevronRight, Package, Search, Filter, Sparkles, PlusCircle } from 'lucide-react';
@@ -9,13 +9,14 @@ interface ToolboxProps {
   eventVibe?: string;
   budgetLimit?: number;
   onAddService: (service: ServiceType) => void;
+  onVisualize?: (vendor: Vendor) => void;
 }
 
 const ALL_SERVICES: ServiceType[] = [
     'VENUE', 'CATERING', 'ACCOMMODATION', 'PHOTOGRAPHER', 'ENTERTAINMENT', 'MARKETING_MATERIALS'
 ];
 
-export const Toolbox: React.FC<ToolboxProps> = ({ requiredServices, eventVibe, budgetLimit, onAddService }) => {
+export const Toolbox: React.FC<ToolboxProps> = ({ requiredServices, eventVibe, budgetLimit, onAddService, onVisualize }) => {
   // Initialize all sections as open
   const [openSections, setOpenSections] = useState<Record<string, boolean>>(
     requiredServices.reduce((acc, curr) => ({ ...acc, [curr]: true }), {})
@@ -219,7 +220,11 @@ export const Toolbox: React.FC<ToolboxProps> = ({ requiredServices, eventVibe, b
                   
                   <div className="space-y-3">
                     {displayVendors.map(vendor => (
-                        <VendorCard key={vendor.id} vendor={vendor} />
+                        <VendorCard 
+                          key={vendor.id} 
+                          vendor={vendor} 
+                          onVisualize={() => onVisualize?.(vendor)}
+                        />
                     ))}
                   </div>
 
